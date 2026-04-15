@@ -1,4 +1,5 @@
 import profilePhoto from "../assets/souvik_banerjee_photo.webp";
+import ThemeToggle from "./ThemeToggle";
 
 function Icon({ id }) {
   if (id === "linkedin") {
@@ -30,9 +31,12 @@ function Icon({ id }) {
   return null;
 }
 
-export default function Hero({ profile, socialLinks }) {
+export default function Hero({ profile, socialLinks, theme, onThemeToggle }) {
   return (
     <header className="hero" aria-labelledby="profile-title">
+      <div className="heroTop">
+        <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+      </div>
       <div className="heroBody">
         <img
           className="profilePhoto"

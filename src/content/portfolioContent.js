@@ -3,7 +3,7 @@ export const profile = {
   role: "Engineer, Writer, and Curious Human",
   location: "Bengaluru, India",
   summary:
-    "I enjoy building thoughtful digital products, writing about ideas, and sharing the small things that make everyday life interesting.",
+    "I enjoy building thoughtful digital products, learning, and writing about things I find useful. Outside work, I care a lot about health and fitness, and running helps me stay consistent and clear-headed.",
 };
 
 export const socialLinks = [
@@ -24,45 +24,51 @@ export const socialLinks = [
   },
 ];
 
-export const aboutParagraphs = [
-  "Most days, you will find me exploring product ideas, frontend architecture, or better developer workflows.",
-  "Outside of work, I like documenting what I learn, reflecting on life, and staying curious through reading, travel, and conversations.",
-];
-
 export const interests = [
   {
-    id: "interest-building",
-    title: "Building Things",
+    id: "interest-travel",
+    title: "Travelling",
     description:
-      "I enjoy turning rough ideas into polished experiences, from product concepts to developer tooling.",
+      "I like exploring new places and cultures, and collecting experiences along the way.",
   },
   {
-    id: "interest-writing",
-    title: "Writing",
+    id: "interest-health-fitness",
+    title: "Health & Fitness",
     description:
-      "I write to think clearly, share practical lessons, and capture ideas that might help others.",
+      "I like staying active and building routines that support long-term physical and mental well-being.",
   },
   {
-    id: "interest-lifebeyondcode",
-    title: "Life Beyond Code",
+    id: "interest-marathons",
+    title: "Running Marathons",
     description:
-      "From travel and photography to books and everyday reflections, I like collecting stories outside the editor.",
+      "I enjoy distance running and training with consistency, one long run at a time.",
+  },
+  {
+    id: "interest-reading",
+    title: "Reading",
+    description:
+      "I enjoy reading across topics to learn, reflect, and bring fresh perspective to both work and life.",
+  },
+  {
+    id: "interest-ux",
+    title: "UX",
+    description:
+      "I am interested in studying what makes digital experiences simple, useful, and intuitive.",
+  },
+  {
+    id: "interest-finance",
+    title: "Finance",
+    description:
+      "I enjoy learning about markets, long-term investing, and personal finance habits.",
   },
 ];
 
-export const blogTracks = [
+export const blogPosts = [
   {
-    id: "blog-tech",
-    title: "Tech Notes",
+    id: "blog-coming-soon",
+    title: "Writing in Progress",
     description:
-      "Frontend engineering, architecture decisions, developer productivity, and practical lessons from shipping products.",
-    status: "Publishing soon",
-  },
-  {
-    id: "blog-life",
-    title: "Non-Tech Notes",
-    description:
-      "Personal essays, observations, and lessons from books, travel, habits, and everyday life.",
+      "I’ll be sharing both tech and non-tech posts here soon.",
     status: "Publishing soon",
   },
 ];
