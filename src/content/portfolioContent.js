@@ -1,16 +1,16 @@
 export const profile = {
   name: "Souvik Banerjee",
-  role: "Engineer, Writer, and Curious Human",
+  role: "Software Engineer and Curious Human",
   location: "Bengaluru, India",
   summary:
-    "I enjoy building thoughtful digital products, learning, and writing about things I find useful. Outside work, I care a lot about health and fitness, and running helps me stay consistent and clear-headed.",
+    "I like building things for the web, sharing what I learn, and spending my off-hours running, travelling, and reading.",
 };
 
 export const socialLinks = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/banerjee-souvik",
+    href: "https://www.linkedin.com/in/banerjee-souvik",
   },
   {
     id: "github",
