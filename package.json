@@ -6,7 +6,7 @@
   "author": "Souvik Banerjee",
   "license": "ISC",
   "type": "module",
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@4.6.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +19,6 @@
   },
   "volta": {
     "node": "25.9.0",
-    "yarn": "1.22.19"
+    "yarn": "4.6.0"
   }
 }
