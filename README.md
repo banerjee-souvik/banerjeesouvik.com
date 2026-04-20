@@ -1,11 +1,11 @@
 # banerjeesouvik.com
 
-Personal website built with React + Vite.
+Personal website built with Next.js.
 
 ## Tech Stack
 
 - React
-- Vite
+- Next.js
 - CSS
 - Volta (pinned Node + Yarn)
 
@@ -24,21 +24,22 @@ yarn dev
 ```
 
 App runs at `http://localhost:5173`.
+App runs at `http://localhost:3000`.
 
 ## Scripts
 
 ```bash
 yarn dev      # start dev server
 yarn build    # production build
-yarn preview  # preview production build
+yarn start    # start production server
 ```
 
 ## Content & Customization
 
 - Profile and social links: `src/content/portfolioContent.js`
-- Page composition: `src/App.jsx`
+- Page composition: `src/App.jsx` and `src/app/page.jsx`
 - Components: `src/components/`
-- Styling and theme tokens: `src/styles.css`
+- Styling and theme tokens: `src/styles.css` (imported via `src/app/layout.jsx`)
 - Profile photo: `src/assets/souvik_banerjee_photo.webp`
 
 ## Theme

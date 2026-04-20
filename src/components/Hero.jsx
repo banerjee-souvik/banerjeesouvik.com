@@ -1,3 +1,4 @@
+import Image from "next/image";
 import profilePhoto from "../assets/souvik_banerjee_photo.webp";
 import ThemeToggle from "./ThemeToggle";
 
@@ -38,11 +39,13 @@ export default function Hero({ profile, socialLinks, theme, onThemeToggle }) {
         <ThemeToggle theme={theme} onToggle={onThemeToggle} />
       </div>
       <div className="heroBody">
-        <img
+        <Image
           className="profilePhoto"
           src={profilePhoto}
           alt="Portrait of Souvik Banerjee"
-          loading="eager"
+          priority
+          width={132}
+          height={132}
         />
         <div className="heroContent">
           <h1 id="profile-title">{profile.name}</h1>
