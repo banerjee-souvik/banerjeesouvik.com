@@ -4,5 +4,6 @@ dist
 package-lock.json
 npm-shrinkwrap.json
 .next
+.open-next
 .yarn
 out

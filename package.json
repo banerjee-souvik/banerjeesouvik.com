@@ -10,12 +10,19 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && wrangler dev",
+    "cf:deploy": "opennextjs-cloudflare build && wrangler deploy"
   },
   "dependencies": {
     "next": "^15.4.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.6.0",
+    "wrangler": "^4.13.2"
   },
   "volta": {
     "node": "25.9.0",
