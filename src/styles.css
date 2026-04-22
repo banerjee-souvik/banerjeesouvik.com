@@ -8,11 +8,11 @@
 
 html[data-theme="light"] {
   --bg: #f4f7fb;
-  --bg-elevated: #ffffffd9;
-  --surface: #ffffffb8;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
   --text: #1c2a38;
-  --text-soft: #43546a;
-  --border: #cfdae8;
+  --text-soft: #364a61;
+  --border: #bccde1;
   --accent: #1e6de0;
   --accent-soft: #d6e6ff;
   --shadow: 0 18px 45px -26px rgb(15 32 58 / 0.45);
@@ -287,6 +287,17 @@ h3 {
   color: var(--text-soft);
 }
 
+.card h3 a,
+.card h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card h3 a:hover,
+.card h2 a:hover {
+  color: var(--accent);
+}
+
 .blogStatus {
   display: inline-flex;
   align-items: center;
@@ -299,6 +310,395 @@ h3 {
   background: color-mix(in oklab, var(--surface) 92%, var(--accent-soft) 8%);
 }
 
+.blogPage {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2.4rem 1.25rem 4rem;
+}
+
+.blogThemeToggle {
+  margin: 0;
+}
+
+.blogTopNavWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.blogTopNav {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0.3rem;
+  padding: 0.26rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--surface) 85%, var(--bg) 15%);
+  box-shadow: 0 6px 18px -14px rgb(0 0 0 / 0.45);
+}
+
+.blogTopNav a {
+  border-radius: 999px;
+  padding: 0.32rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition:
+    color 140ms ease,
+    background-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.blogTopNav a:hover {
+  color: var(--text);
+  background: color-mix(in oklab, var(--surface) 80%, var(--accent-soft) 20%);
+}
+
+.blogTopNav a:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--accent) 65%, white 35%);
+  outline-offset: 1px;
+}
+
+.blogTopNav a.isActive {
+  color: var(--text);
+  background: color-mix(in oklab, var(--surface) 70%, var(--accent-soft) 30%);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 45%, var(--border) 55%);
+}
+
+html[data-theme="dark"] .blogTopNav a.isActive {
+  color: #eef4ff;
+}
+
+.blogTopNavWrap .themeToggle {
+  padding: 0.32rem 0.62rem;
+  font-size: 0.82rem;
+}
+
+.blogHeader {
+  margin-bottom: 1.2rem;
+}
+
+.blogHeader h1 {
+  margin: 0;
+}
+
+.blogHeader p {
+  margin: 0.65rem 0 0;
+  color: var(--text-soft);
+  max-width: 72ch;
+}
+
+.blogEyebrow {
+  margin: 0 0 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
+  color: var(--text-soft);
+}
+
+.blogIndexGrid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.blogMetaLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+}
+
+.blogTagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.blogTag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.77rem;
+  color: var(--text-soft);
+}
+
+.blogArticle {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.2rem 1.4rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.blogContent h2 {
+  margin: 1.3rem 0 0.55rem;
+}
+
+.blogContent p {
+  margin: 0.55rem 0 0;
+  color: var(--text-soft);
+  max-width: 74ch;
+}
+
+html[data-theme="light"] .blogArticle {
+  box-shadow: 0 12px 28px -22px rgb(14 38 74 / 0.32);
+}
+
+.blogCode {
+  margin: 0.75rem 0 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--surface) 90%, black 10%);
+  color: #d9e8ff;
+  padding: 0.85rem 0.95rem;
+  font-size: 0.84rem;
+  overflow-x: auto;
+}
+
+html[data-theme="light"] .blogCode {
+  background: #0f1b2c;
+  color: #deebff;
+}
+
+.blogList {
+  margin: 0.6rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.blogList li {
+  margin-top: 0.35rem;
+  color: var(--text-soft);
+}
+
+.blogLottie {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 0.85rem;
+}
+
+.blogLottie h3 {
+  margin: 0;
+}
+
+.blogLottie p {
+  margin-top: 0.45rem;
+}
+
+.loopSim {
+  margin-top: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--surface) 93%, var(--accent-soft) 7%);
+  padding: 0.9rem 0.9rem 0.82rem;
+}
+
+.loopLanes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.loopLane {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.62rem 0.65rem 0.65rem;
+  background: color-mix(in oklab, var(--bg-elevated) 90%, transparent);
+  animation: loopLanePulse 8s ease-in-out infinite;
+}
+
+.loopLane h4 {
+  margin: 0;
+  font-size: 0.91rem;
+}
+
+.loopLane p {
+  margin: 0.2rem 0 0.48rem;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.loopToken,
+.loopFrame {
+  border: 1px solid color-mix(in oklab, var(--accent) 62%, var(--border) 38%);
+  background: color-mix(in oklab, var(--accent-soft) 36%, var(--surface) 64%);
+  color: var(--text);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.24rem 0.72rem;
+  font-size: 0.77rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.loopChipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.loopChip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.18rem 0.52rem;
+  background: var(--surface);
+  font-size: 0.74rem;
+  color: var(--text-soft);
+  opacity: 0.45;
+  transform: translateY(2px);
+  animation: loopChipPop 8s ease-in-out infinite;
+}
+
+.loopChip:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loopToken,
+.loopFrame,
+.loopTokenNext {
+  opacity: 0.48;
+  transform: scale(0.98);
+  animation: loopSignal 8s ease-in-out infinite;
+}
+
+.loopLaneStack {
+  animation-delay: 0s;
+}
+
+.loopLaneMicrotask {
+  animation-delay: 2s;
+}
+
+.loopLaneRender {
+  animation-delay: 4s;
+}
+
+.loopLaneTask {
+  animation-delay: 6s;
+}
+
+.loopLaneStack .loopToken {
+  animation-delay: 0s;
+}
+
+.loopLaneMicrotask .loopChip {
+  animation-delay: 2s;
+}
+
+.loopLaneRender .loopFrame {
+  animation-delay: 4s;
+}
+
+.loopLaneTask .loopTokenNext {
+  animation-delay: 6s;
+}
+
+.loopOrder {
+  margin: 0.7rem 0 0;
+  padding-left: 1rem;
+  color: var(--text-soft);
+  font-size: 0.83rem;
+}
+
+.loopOrder li + li {
+  margin-top: 0.22rem;
+}
+
+@keyframes loopLanePulse {
+  0%,
+  12%,
+  100% {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+  18%,
+  30% {
+    border-color: color-mix(in oklab, var(--accent) 58%, var(--border) 42%);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 22%, transparent);
+  }
+}
+
+@keyframes loopSignal {
+  0%,
+  10%,
+  100% {
+    opacity: 0.48;
+    transform: scale(0.98);
+  }
+  16%,
+  28% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+}
+
+@keyframes loopChipPop {
+  0%,
+  10%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(2px);
+  }
+  16%,
+  28% {
+    opacity: 1;
+    transform: translateY(0);
+    border-color: color-mix(in oklab, var(--accent) 58%, var(--border) 42%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loopLane,
+  .loopToken,
+  .loopFrame,
+  .loopTokenNext,
+  .loopChip {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.blogReferences {
+  margin-top: 1.6rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.blogReferences a {
+  color: var(--text);
+}
+
+.blogReferences a:hover {
+  color: var(--accent);
+}
+
 @media (max-width: 800px) {
   .interestsGrid,
   .blogGrid {
@@ -309,6 +709,14 @@ h3 {
 @media (max-width: 700px) {
   .page {
     padding: 1.4rem 1rem 2.5rem;
+  }
+
+  .blogPage {
+    padding: 1.4rem 1rem 2.5rem;
+  }
+
+  .blogTopNavWrap {
+    align-items: flex-start;
   }
 
   .ambient {
@@ -331,5 +739,9 @@ h3 {
 
   .profilePhoto {
     width: 100px;
+  }
+
+  .loopLanes {
+    grid-template-columns: 1fr;
   }
 }

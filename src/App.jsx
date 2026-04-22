@@ -1,9 +1,9 @@
 import {
-  blogPosts,
   interests,
   profile,
   socialLinks,
 } from "./content/portfolioContent";
+import { getAllBlogPosts } from "./content/blogPosts";
 import BlogSection from "./components/BlogSection";
 import Hero from "./components/Hero";
 import InterestsSection from "./components/InterestsSection";
@@ -11,6 +11,13 @@ import useTheme from "./hooks/useTheme";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
+  const blogPreview = getAllBlogPosts().map((post) => ({
+    id: post.slug,
+    slug: post.slug,
+    title: post.title,
+    description: post.excerpt,
+    status: `${post.readingMinutes} min read`,
+  }));
 
   return (
     <div className="page">
@@ -26,7 +33,7 @@ export default function App() {
 
       <main>
         <InterestsSection interests={interests} />
-        <BlogSection posts={blogPosts} />
+        <BlogSection posts={blogPreview} />
       </main>
     </div>
   );

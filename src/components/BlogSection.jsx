@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Section from "./Section";
 
 export default function BlogSection({ posts }) {
@@ -6,9 +7,11 @@ export default function BlogSection({ posts }) {
       <div className="blogGrid">
         {posts.map((post) => (
           <article className="card" key={post.id}>
-            <h3>{post.title}</h3>
+            <h3>
+              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+            </h3>
             <p>{post.description}</p>
-            <p className="blogStatus">{post.status}</p>
+            <p className="blogStatus">{post.status ?? "Published"}</p>
           </article>
         ))}
       </div>

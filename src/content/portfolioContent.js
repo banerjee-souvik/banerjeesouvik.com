@@ -62,13 +62,3 @@ export const interests = [
       "I enjoy learning about markets, long-term investing, and personal finance habits.",
   },
 ];
-
-export const blogPosts = [
-  {
-    id: "blog-coming-soon",
-    title: "Writing in Progress",
-    description:
-      "I’ll be sharing both tech and non-tech posts here soon.",
-    status: "Publishing soon",
-  },
-];
