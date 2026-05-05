@@ -250,16 +250,6 @@ h3 {
   font-size: 1rem;
 }
 
-.aboutCopy p {
-  margin: 0;
-  max-width: 72ch;
-  color: var(--text-soft);
-}
-
-.aboutCopy p + p {
-  margin-top: 0.7rem;
-}
-
 .interestsGrid,
 .blogGrid {
   display: grid;
@@ -436,18 +426,6 @@ html[data-theme="dark"] .blogTopNav a.isActive {
   background: var(--bg-elevated);
   box-shadow: var(--shadow);
   padding: 1.25rem 1.2rem 1.4rem;
-}
-
-.backLink {
-  display: inline-block;
-  margin-bottom: 0.8rem;
-  color: var(--text-soft);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.backLink:hover {
-  color: var(--accent);
 }
 
 .blogContent h2 {
